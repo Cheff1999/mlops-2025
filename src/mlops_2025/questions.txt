@@ -1,0 +1,5 @@
+Two new models, RandomForestClassifier and XGBoostClassifier, were added to the package, each implementing the shared BaseModel interface. Since the training, evaluation, and prediction scripts already used this interface, no structural changes were needed—just swapping the model class.
+
+Both models were trained and evaluated using the same preprocessing and feature engineering, with Random Forest outperforming logistic regression in accuracy, and XGBoost providing further improvements when tuned. The class-based architecture allowed easy model swapping, showcasing its flexibility.
+
+Future improvements could include centralizing shared utilities, using configuration files for hyperparameters, enhancing logging, and implementing dependency injection for cleaner component swapping.
